@@ -1,0 +1,26 @@
+// Function to get current weather
+SET currentLocation(){}
+INITIALIZE variable to get longitufde and ltitude coordinations
+INITIALIZE variable for API key and API apiPoint 
+INITIALIZE variable for API url
+
+//Create function to search weather conditions for the place that the usser searches for
+function getCity(){}
+INITIALIZE varaibles to get key and url
+CALL axios
+
+//Create function that will set search for the city
+INITIALIZE variable to get user inputlet userInput
+INITIALIZE variable to get html element where the searched city will be displayed
+
+//Initialize variable to get user input in search bar
+SET getCity = document.getElementById
+
+//Initialize variables display current time and dates
+SET day = access the element by id set in HTML
+SET time = access the element by id set in HTML
+SET month = access the element by id set in HTML
+
+
+//Create a function that will get icons for the weather conditions for the city that the users seaerches for
+function displayIcon = get the html elemnt that displays the weather icon

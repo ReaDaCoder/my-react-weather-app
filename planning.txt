@@ -1,0 +1,18 @@
+1. Displaying UI
+2.User gets alert that will access their current location.
+3. Initialize variable that will access user input
+  a.The user will be able to enter city
+  b. As user "clicks search", the weather conditions or the searched city will appear on the screen
+4. Create a function that will be responsible displaying current weather conditions
+5. Create a Function that will get weather conditions for weather conditions of other locations
+6. Create a functions that will  get daily and hourly weather conditions
+a.Then user will be able to see the weather temperatures for the next five days
+b. When the user clicks on the hourly the user will be redirected to a page where they will view the temperatures for the next 24 hours
+7.Function to switch between celsius and fahrenheit temperature
+  a. Will see two buttons to switch between celsius and farenheit temperatures
+8.Add button to switch between dark and light theme.
+a. When the user clicks on the dark theme button the application will switch from light mode to dark mode
+9. Get user's notification as soon as the open the app.
+10. Create functions for local storage
+  a. Add local storage to allow user to access info while offline.
+  b.a local storage function that will keep the theme that the user choose without changing back after refreshing.
