@@ -1,14 +1,27 @@
 body{
     justify-content: center;
 }
+label {
+    display: block;
+    font:
+      1rem 'Fira Sans',
+      sans-serif;
+  }
+  
+  input,
+  label {
+    margin: 0.4rem 0;
+  }
 .main-page{
     justify-content: center;
     text-align: center;
     background-color: aqua;
 }
+
 .col, .row{
     padding: 150px;
 }
+
 .container{
     margin-bottom: 6mx-auto0px;
 }

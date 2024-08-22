@@ -2,11 +2,13 @@
 import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
+import TimeAndDate from "./TimeAndDate";
 
 
 function Main(){
     const [temperature, setTemperature] = useState(null);
     const [weatherData, setWeatherData] = useState({ ready: false });
+
 
     return(
         <div className="main-page mx-auto">
@@ -14,10 +16,16 @@ function Main(){
             <div className="container">
   <div className="row">
     <div className="col">
+    <label for="site-search">Search the site:</label>
+<input type="search" id="site-search" name="q" />
+
+<button>Search</button>
+
       1 of 2
       <h2 id="city">London</h2>
       <img src=""/>
       <div id="weather-temperature"></div>
+      
       <div id="date-time">Monday, 09:00</div>
       <div id="description">Sunny</div>
     </div>
