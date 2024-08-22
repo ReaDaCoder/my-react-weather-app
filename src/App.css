@@ -1,1 +1,14 @@
-
+body{
+    justify-content: center;
+}
+.main-page{
+    justify-content: center;
+    text-align: center;
+    background-color: aqua;
+}
+.col, .row{
+    padding: 150px;
+}
+.container{
+    margin-bottom: 6mx-auto0px;
+}
