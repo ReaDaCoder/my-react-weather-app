@@ -48,7 +48,7 @@ function Main(){
               <h1>Weather App</h1>
                 <div className="container">
       <div className="row">
-        <div className="col">
+        <div className="col left">
           <form onSubmit={getSubmit}>
           <label for="site-search">Search the site:</label>
     <input type="search" id="site-search" name="q" onChange={getCity}/>
@@ -63,7 +63,7 @@ function Main(){
           <TimeAndDate/>
           <div id="description">{weatherData.description}</div>
         </div>
-        <div className="col">
+        <div className="col right">
           2 of 2
           <div class="container text-center">
       <div class="row">
