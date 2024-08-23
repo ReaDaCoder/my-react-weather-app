@@ -4,6 +4,7 @@ export default function TimeAndDate(){
 
     const [hour, setHour] = useState('');
     const [minutes, setMinutes] = useState('');
+    const [currentDay, setCurrentDay] = useState('');
 
     useEffect(() => {
         let now = new Date();
@@ -15,7 +16,7 @@ export default function TimeAndDate(){
 
     return(
         <div className="time-date">
-            <div id="date-time">Monday, 09:00</div>
+            <div id="date-time">{currentDay}, {hour}:{minutes}</div>
         </div>
     )
 }
