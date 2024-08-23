@@ -1,25 +1,53 @@
+//INITIALIZE VARIABLES
+variable to get longitude and latitude coordinations
+variable for API key and API apiPoint 
+variable for API url
+varaibles to get key and url
+variable to get user inputlet userInput
+variable to get html element where the searched city will be displayed
+SET day = access the element by id set in HTML
+SET time = access the element by id set in HTML
+SET month = access the element by id set in HTML
+
+//COMPONENTS
+1.component for main page => 
+-This is where all components will linked
+2.component for weather details => 
+-This will contain weather condition for current weather and searched cities
+3.component for time and date =>
+-This component will display the current time and date
+4. component for icons
+- this component will contail all the react animated weather icons
+5. component for for switching (fahrenheit vs celsuis & dark mode vs light mode)
+6. Component to display daily weather conditions
+7. component to display hourly weather conditions
+
+
+   FUNCTION getCity
+prevent default behaviour
+use setCity useState to get user input
+   END
+
+
+
+
+
+
 // Function to get current weather
 SET currentLocation(){}
-INITIALIZE variable to get longitufde and ltitude coordinations
-INITIALIZE variable for API key and API apiPoint 
-INITIALIZE variable for API url
 
 //Create function to search weather conditions for the place that the usser searches for
 function getCity(){}
-INITIALIZE varaibles to get key and url
+INITIALIZE 
 CALL axios
 
 //Create function that will set search for the city
-INITIALIZE variable to get user inputlet userInput
-INITIALIZE variable to get html element where the searched city will be displayed
 
 //Initialize variable to get user input in search bar
 SET getCity = document.getElementById
 
 //Initialize variables display current time and dates
-SET day = access the element by id set in HTML
-SET time = access the element by id set in HTML
-SET month = access the element by id set in HTML
+
 
 
 //Create a function that will get icons for the weather conditions for the city that the users seaerches for

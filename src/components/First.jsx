@@ -13,12 +13,12 @@ function Main(){
 
     function getSubmit(event){
       event.preventDefault();
+      search();
     }
 
     function getCity(event){
       event.preventDefault();
       setCity(event.target.value);
-      alert(city);
     }
 
     function getResponse(response) {
@@ -38,9 +38,11 @@ function Main(){
   }
 
     //let city = "London";
-        let apiKey = "5d7b9ccc3e46361f64b317d8161bb16e";
+    function search() {
+      const apiKey = "5d7b9ccc3e46361f64b317d8161bb16e";
         let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city},uk&appid=${apiKey}&units=metric`;
         axios.get(apiUrl).then(getResponse);
+    }
 
         //if(weatherData.ready){
           return(
@@ -65,13 +67,22 @@ function Main(){
           <div class="container text-center">
       <div class="row">
         <div class="col">
-          Column
+          Mon
         </div>
         <div class="col">
-          Column
+          Tue
         </div>
         <div class="col">
-          Column
+          Wedn
+        </div>
+        <div class="col">
+          Thurs
+        </div>
+        <div class="col">
+          Fri
+        </div>
+        <div class="col">
+          Sat
         </div>
       </div>
     </div>
@@ -94,9 +105,10 @@ function Main(){
     </div>
             </div>
         )
-        //} 
-        /*else{
-          return "Unavailable";
+        /*} 
+        else{
+        search();
+          //return "Unavailable";
         }*/
 }
 

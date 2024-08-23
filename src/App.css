@@ -16,7 +16,6 @@ label {
 .main-page{
     justify-content: center;
     text-align: center;
-    background-color: aqua;
 }
 
 .col, .row{
@@ -34,4 +33,10 @@ label {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .left{
+    margin-right: 25px;
+  }
+  .right{
+    margin-left: 25px;
   }
