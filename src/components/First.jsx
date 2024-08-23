@@ -15,6 +15,12 @@ function Main(){
       event.preventDefault();
     }
 
+    function getCity(event){
+      event.preventDefault();
+      setCity(event.target.value);
+      alert(city);
+    }
+
     function getResponse(response) {
       console.log(response.data);
       setWeatherData({
@@ -36,47 +42,65 @@ function Main(){
         let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city},uk&appid=${apiKey}&units=metric`;
         axios.get(apiUrl).then(getResponse);
 
-
-
-    return(
-        <div className="main-page mx-auto">
-          <h1>Weather App</h1>
-            <div className="container">
-  <div className="row">
-    <div className="col">
-    <label for="site-search">Search the site:</label>
-<input type="search" id="site-search" name="q" />
-
-<button>Search</button>
-
-      1 of 2
-      <h2 id="city">{weatherData.city}</h2>
-      <img src=""/>
-      <div id="weather-temperature">{weatherData.temperature}</div>
-      <TimeAndDate/>
-      <div id="description">{weatherData.description}</div>
-    </div>
-    <div className="col">
-      2 of 2
-    </div>
-  </div>
-  <div className="row">
-    <div className="col">
-      1 of 3
-      <div id="humidity">{weatherData.humidity}</div>
-    </div>
-    <div className="col">
-      <div id="visibility">Visibility</div>
-      2 of 3
-    </div>
-    <div className="col">
-      3 of 3
-      <div id="air-quality">Air Quality</div>
-    </div>
-  </div>
-</div>
+        //if(weatherData.ready){
+          return(
+            <div className="main-page mx-auto">
+              <h1>Weather App</h1>
+                <div className="container">
+      <div className="row">
+        <div className="col">
+          <form onSubmit={getSubmit}>
+          <label for="site-search">Search the site:</label>
+    <input type="search" id="site-search" name="q" onChange={getCity}/>
+    
+    <button>Search</button>
+          </form>
+    
+          1 of 2
+          <h2 id="city">{weatherData.city}</h2>
+          <img src=""/>
+          <div id="weather-temperature">{weatherData.temperature}</div>
+          <TimeAndDate/>
+          <div id="description">{weatherData.description}</div>
         </div>
-    )
+        <div className="col">
+          2 of 2
+          <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          Column
+        </div>
+        <div class="col">
+          Column
+        </div>
+        <div class="col">
+          Column
+        </div>
+      </div>
+    </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          1 of 3
+          <div id="humidity">{weatherData.humidity}</div>
+        </div>
+        <div className="col">
+          <div id="visibility">Visibility</div>
+          2 of 3
+        </div>
+        <div className="col">
+          3 of 3
+          <div id="air-quality">Air Quality</div>
+        </div>
+      </div>
+    </div>
+            </div>
+        )
+        //} 
+        /*else{
+          return "Unavailable";
+        }*/
 }
 
 export default Main
