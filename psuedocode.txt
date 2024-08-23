@@ -47,8 +47,15 @@ use setCity useState to get user input
      interpulate the response from the useStae into the div that will display the time and date
      END
 
+     //SWITCH THEME COMPONENT
      FUNCTION darkMode
-     
+
+
+     //WEATHER ICONS COMPONENTS
+
+     FUNCTION icons
+     we created a custum icon using react animated weather icons
+
 
 
 

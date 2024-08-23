@@ -4,11 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
 import axios from 'axios';
 import TimeAndDate from "./TimeAndDate";
-import ReactAnimatedWeather from 'react-animated-weather';
-import Icons from './Icons';
+import Icons from "./Icons";
+import Dark from './Dark_Theme';
 
 
-function Main(){
+function Main(data={weatherData}){
     const [temperature, setTemperature] = useState(null);
     const [weatherData, setWeatherData] = useState({ ready: false });
     const [city, setCity] = useState(weatherData);
@@ -52,6 +52,7 @@ function Main(){
             <div className="main-page mx-auto">
               <h1>Weather App</h1>
                 <div className="container">
+                <Dark />
       <div className="row">
         <div className="col left">
           <form onSubmit={getSubmit}>
@@ -61,7 +62,7 @@ function Main(){
     <button>Search</button>
           </form>
           <h2 id="city">{weatherData.city}</h2>
-          <Icons code={props.data.icon} alt={props.data.description}/>
+          <Icons code={weatherData.icon} alt={weatherData.description}/>
           <img src=""/>
           <div id="weather-temperature">{weatherData.temperature}</div>
           <TimeAndDate/>
