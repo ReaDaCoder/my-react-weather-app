@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
 import axios from 'axios';
 import TimeAndDate from "./TimeAndDate";
+import ReactAnimatedWeather from 'react-animated-weather';
+import Icons from './Icons';
 
 
 function Main(){
@@ -29,6 +31,7 @@ function Main(){
           temperature: response.data.main.temp,
           humidity: response.data.main.humidity,
           description: response.data.weather[0].description,
+          //iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
           icon: response.data.weather[0].icon,
           wind: response.data.wind.speed,
           city: response.data.name,
@@ -58,6 +61,7 @@ function Main(){
     <button>Search</button>
           </form>
           <h2 id="city">{weatherData.city}</h2>
+          <Icons code={props.data.icon} alt={props.data.description}/>
           <img src=""/>
           <div id="weather-temperature">{weatherData.temperature}</div>
           <TimeAndDate/>

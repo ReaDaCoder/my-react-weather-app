@@ -22,11 +22,33 @@ SET month = access the element by id set in HTML
 6. Component to display daily weather conditions
 7. component to display hourly weather conditions
 
-
+//MAIN COMPONENT
    FUNCTION getCity
 prevent default behaviour
 use setCity useState to get user input
-   END
+   END 
+
+    FUNCTION getResponse
+    this is where we are gonna set the state that gets the responses from the API
+    -coordinationates, temperature, humidity, etc.
+    END
+
+    FUNCTION search
+    this is where we will Initialize variables for the API key and API url
+    END
+
+    //TIME AND DATE COMPONENT
+
+    FUNCTION
+    SET usestae for hour, minutes and current day
+    END
+     
+     RETURN
+     interpulate the response from the useStae into the div that will display the time and date
+     END
+
+     FUNCTION darkMode
+     
 
 
 
