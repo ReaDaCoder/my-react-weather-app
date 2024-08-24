@@ -6,6 +6,7 @@ import axios from 'axios';
 import TimeAndDate from "./TimeAndDate";
 import Icons from "./Icons";
 import Dark from './Dark_Theme';
+import WeatherTemperature from "./WeatherTemperature";
 
 
 function Main(data={weatherData}){
@@ -56,15 +57,14 @@ function Main(data={weatherData}){
       <div className="row">
         <div className="col left">
           <form onSubmit={getSubmit}>
-          <label for="site-search">Search the site:</label>
+          <label for="site-search">Search city:</label>
     <input type="search" id="site-search" name="q" onChange={getCity}/>
     
     <button>Search</button>
           </form>
           <h2 id="city">{weatherData.city}</h2>
           <Icons code={weatherData.icon} alt={weatherData.description}/>
-          <img src=""/>
-          <div id="weather-temperature">{weatherData.temperature}</div>
+          <WeatherTemperature celsius={weatherData.temperature}/>
           <TimeAndDate/>
           <div id="description">{weatherData.description}</div>
         </div>
