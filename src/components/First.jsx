@@ -7,6 +7,7 @@ import TimeAndDate from "./TimeAndDate";
 import Icons from "./Icons";
 import Dark from './Dark_Theme';
 import WeatherTemperature from "./WeatherTemperature";
+import DailyForecast from "./DailyForecast";
 
 
 function Main(data={weatherData}){
@@ -71,24 +72,7 @@ function Main(data={weatherData}){
         <div className="col right">
           <div class="container text-center">
       <div class="row">
-        <div class="col">
-          Mon
-        </div>
-        <div class="col">
-          Tue
-        </div>
-        <div class="col">
-          Wedn
-        </div>
-        <div class="col">
-          Thurs
-        </div>
-        <div class="col">
-          Fri
-        </div>
-        <div class="col">
-          Sat
-        </div>
+       <DailyForecast/>
       </div>
     </div>
         </div>
