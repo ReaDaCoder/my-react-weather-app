@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Icons from "./Icons";
+import ForecastDay from "./forecastDay"
 
 export default function DailyForecast(props){
   const [loaded, setLoaded] = useState(false);
@@ -14,6 +15,7 @@ export default function DailyForecast(props){
       <div>
         <div class="row">
         <div class="col">
+          <ForecastDay data={forecast[0]}/>
           <div className="forecast-day"> {forecast[0].dt}</div>
           <Icons code={forecast[0].weather[0].icon} size={36}/>
         <div className="forecast-temperature">
