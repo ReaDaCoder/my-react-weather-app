@@ -71,9 +71,7 @@ function Main(data={weatherData}){
         </div>
         <div className="col right">
           <div class="container text-center">
-      <div class="row">
-       <DailyForecast/>
-      </div>
+       <DailyForecast coords={weatherData.coordinates}/>
     </div>
         </div>
       </div>
