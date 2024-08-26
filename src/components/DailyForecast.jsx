@@ -1,5 +1,40 @@
 import React, { useState } from "react";
 import Icons from "./Icons";
+import ForecastDay from "./ForecastDay";
+
+export default function DailyForecast(props) {
+  const [loaded, setLoaded] = useState(false);
+  const [forecast, setForecast] = useState(null);
+
+  function showResponse(response) {
+    setForecast(response.data.daily);
+    setLoaded(true);
+  }
+
+  if (!loaded || !forecast || forecast.length === 0) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <div>
+      <div className="row">
+        <div className="col">
+          <ForecastDay data={forecast[0]} />
+          <div className="forecast-day">{forecast[0].dt}</div>
+          <Icons code={forecast[0].weather[0].icon} size={36} />
+          <div className="forecast-temperature">
+            <span className="temperature-max">{forecast[0].temp.max}°</span>
+            <span className="temperature-min">{forecast[0].temp.min}°</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+/*import React, { useState } from "react";
+import Icons from "./Icons";
 import ForecastDay from "./forecastDay"
 
 export default function DailyForecast(props){
@@ -36,4 +71,4 @@ export default function DailyForecast(props){
     axios.get(apiUrl).then(showResponse);
  // }
    
-}
+}*/

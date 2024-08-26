@@ -22,6 +22,11 @@ export default function Icons(props){
     "50d": "FOG",
     "50n": "FOG",
   };
+  const icon = codeMapping[props.code] || "CLEAR_DAY";
+  const size = props.size || 64;
+
+
+
   return(
     <ReactAnimatedWeather
     icon={codeMapping[props.code]}
