@@ -54,7 +54,14 @@ use setCity useState to get user input
      //WEATHER ICONS COMPONENTS
 
      FUNCTION icons
-     we created a custum icon using react animated weather icons
+     created a custum icon using react animated weather icons
+     END
+
+     //CHANGE THEME mode
+     FUNCTION
+     CHange app mode
+
+     END
 
 
 
