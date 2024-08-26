@@ -37,6 +37,11 @@ use setCity useState to get user input
     this is where we will Initialize variables for the API key and API url
     END
 
+    FUNCTION
+    Get current location by using Geolocation
+    using axios and call API then call getResponse function
+    END
+
     //TIME AND DATE COMPONENT
 
     FUNCTION
@@ -63,28 +68,12 @@ use setCity useState to get user input
 
      END
 
+     //COMPONENT TO GET DAILY temperature
+       FUNCTION
+       Get response from apiPoint
+        RETURN
+        JSX to display forecast and implement the response from the api using props
+
+      END
 
 
-
-
-
-
-// Function to get current weather
-SET currentLocation(){}
-
-//Create function to search weather conditions for the place that the usser searches for
-function getCity(){}
-INITIALIZE 
-CALL axios
-
-//Create function that will set search for the city
-
-//Initialize variable to get user input in search bar
-SET getCity = document.getElementById
-
-//Initialize variables display current time and dates
-
-
-
-//Create a function that will get icons for the weather conditions for the city that the users seaerches for
-function displayIcon = get the html elemnt that displays the weather icon
