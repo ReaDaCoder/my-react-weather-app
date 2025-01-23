@@ -6,7 +6,7 @@ import ForecastDay from "./ForecastDay";
 export default function DailyForecast(props) {
   const [forecast, setForecast] = useState(null);
 
-  // Fetch forecast data when coordinates change
+  
   useEffect(() => {
     if (props.coordinates) {
       const apiKey = "64469ac67e6dc941feb5b50915a18dc7";
